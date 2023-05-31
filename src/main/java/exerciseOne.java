@@ -1,6 +1,8 @@
+
 import java.util.Scanner;
 
 public class exerciseOne {
+    //TODO Kommentare lassen sich nicht pushen??
     //TODO Warum muss dieses Klassen Array static sein?
     static String [] wordsOfNumbers = {"Null","Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun"};
 
@@ -13,7 +15,9 @@ public class exerciseOne {
 
       //  System.out.println(determineWordOfNumber(4));
 
-        printNumbers();
+       // printNumbers();
+
+        inputWords();
     }
 
     public static void printUserName(){
@@ -58,5 +62,44 @@ public class exerciseOne {
                 System.out.println(i);
             }
         }
+    }
+
+    public static void inputWords(){
+        String [] array = new String[100];
+
+        boolean exit = true;
+        boolean wantPrint = true;
+        int counter = 0;
+        String tempInput = null;
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Hey user, hier kannst du bis zu einhundert Wörter eingeben und diese temporär speichern.");
+        System.out.println("Wenn du deine Wörter ausgeben möchtest gib 'p' in die Konsole ein.");
+        System.out.println("Wenn du das Programm beenden möchtest gib 'e in die Konsole ein.");
+        System.out.println("Bist du bereit?? Dann bestätige mit Enter.");
+        scanner.nextLine();
+        System.out.println("Los geht´s!");
+
+        do {
+
+                    System.out.println("Gib dein " + (counter + 1) + " Wort ein!");
+
+                    tempInput = scanner.nextLine();
+                    if (tempInput.equals("p")){
+                        for (int i = 0; i < counter; i++){
+                            System.out.println((i+1) + ". " + array[i]);
+                        }
+                    }else if (tempInput.equals("e")){
+                        exit = false;
+                    }else{
+                        array[counter] = tempInput;
+                    }
+                    if (counter == 99){
+                        exit = false;
+                    }
+
+                counter++;
+        }while(exit);
     }
 }
