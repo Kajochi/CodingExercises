@@ -5,7 +5,7 @@ public class exerciseOne {
 
 
         printUserName();
-
+        System.out.println(calculatePowerOfInt(9));
 
     }
 
@@ -17,5 +17,9 @@ public class exerciseOne {
         String name = scanner.nextLine();
 
         System.out.println("Hallo " + name + ". Schön das du da bist!");
+    }
+
+    public static double calculatePowerOfInt(int num){
+        return Math.pow(num, 2);
     }
 }
