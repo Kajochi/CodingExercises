@@ -9,17 +9,18 @@ public class exerciseOne {
     public static void main(String[] args) {
 
 
-      //  printUserName();
+       printUserName();
 
-        //System.out.println(calculatePowerOfInt(9));
+        System.out.println(calculatePowerOfInt(9));
 
-      //  System.out.println(determineWordOfNumber(4));
+        System.out.println(determineWordOfNumber(4));
 
-       // printNumbers();
+       printNumbers();
 
         inputWords();
     }
 
+    //Hier das muss ich kommentieren
     public static void printUserName(){
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +36,7 @@ public class exerciseOne {
     }
 
     public static String determineWordOfNumber(int num){
-        //TODO numWord musste initialisiert werden ansonsten gab es eine Fehlermeldung, unten bei return numWord!?
+
         String numWord = null;
 
         for (int i = 0; i <= 9; i++){
