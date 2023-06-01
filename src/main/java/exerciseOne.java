@@ -20,6 +20,7 @@ public class exerciseOne {
         inputWords();
     }
 
+    //Hier das muss ich kommentieren
     public static void printUserName(){
         Scanner scanner = new Scanner(System.in);
 
