@@ -2,9 +2,7 @@
 import java.util.Scanner;
 
 public class exerciseOne {
-    //TODO Kommentare lassen sich nicht pushen??
-    //TODO Warum muss dieses Klassen Array static sein?
-    static String [] wordsOfNumbers = {"Null","Eins", "Zwei", "Drei", "Vier", "Fünf", "Sechs", "Sieben", "Acht", "Neun"};
+
 
     public static void main(String[] args) {
 
@@ -17,7 +15,25 @@ public class exerciseOne {
 
        // printNumbers();
 
-        inputWords();
+       // inputWords();
+        System.out.println(highAndLow("2 4 -1 7 1 3"));
+    }
+
+    public static String highAndLow(String nums){
+        String [] array = nums.split(" ");
+        String result1 = null;
+        String result2 = null;
+        for (int i = 0; i<(array.length-1);i++){
+            for (int j = 1; j<(array.length); j++){
+                if (Integer.parseInt(array[i])>Integer.parseInt(array[j]) ){
+                        result1 = array[i];
+                }
+                if (Integer.parseInt(array[i])<Integer.parseInt(array[j]) ){
+                    result2 = array[i];
+                }
+            }
+        }
+        return result1 + " " + result2;
     }
 
     public static void printUserName(){
@@ -35,16 +51,7 @@ public class exerciseOne {
     }
 
     public static String determineWordOfNumber(int num){
-        //TODO numWord musste initialisiert werden ansonsten gab es eine Fehlermeldung, unten bei return numWord!?
-        String numWord = null;
-
-        for (int i = 0; i <= 9; i++){
-
-            if(num == i){
-                numWord = wordsOfNumbers[i];
-            }
-        }
-        return numWord;
+        return Integer.toString(num);
 
     }
 
