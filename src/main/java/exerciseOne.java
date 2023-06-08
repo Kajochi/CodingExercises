@@ -16,7 +16,7 @@ public class exerciseOne {
        // printNumbers();
 
        // inputWords();
-        System.out.println(highAndLow("2 4 -1 7 1 3"));
+
     }
 
     public static String highAndLow(String nums){
